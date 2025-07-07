@@ -32,7 +32,7 @@ function Search() {
     // }
     let route = router.push({
       pathname: "/search",
-      query: { q: form?.search },
+      query: { q: form.search },
     });
     console.log(route);
   };
@@ -42,7 +42,7 @@ function Search() {
       <input
         type="text"
         name="search"
-        value={form?.search}
+        value={form.search}
         onChange={handleChange}
         placeholder="Search"
         className="input  input-bordered w-full sm:w-24 md:w-auto"
