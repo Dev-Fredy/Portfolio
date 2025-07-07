@@ -10,8 +10,8 @@ let getTechnologies = async () => {
       next: { revalidate: 60 },
     });
 
-    if (res.status === 404) {
-      return notFound();
+    if (!res.ok) {
+      throw new Error(`Failed to fetch the data: ${res.status}`);
     }
 
     return res.json();
