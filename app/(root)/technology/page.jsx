@@ -22,7 +22,7 @@ async function Technology() {
 
   console.log(techs);
   return (
-    <div className="grid w-full h-fullss">
+    <div className=" w-full h-fullss">
       <div className="card card-lg flex flex-row h-1/5 items-center">
         <figure className="w-1/4 h-24 rounded-2xl">
           <img

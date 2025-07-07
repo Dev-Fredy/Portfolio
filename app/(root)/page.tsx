@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Technologies from "../components/Technologies";
+import Hero from "../../components/Hero";
+import Technologies from "../../components/Technologies";
 import Footer from "@/components/Footer";
-import Projects from "../components/Projects";
-import Socials from "../components/Socials";
+import Projects from "../../components/Projects";
+import Socials from "../../components/Socials";
 
 function Home() {
   return (

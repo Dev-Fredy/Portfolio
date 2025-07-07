@@ -24,24 +24,35 @@ async function Projects() {
   // console.log(projects);
 
   let project = projects.projects.map((item, index) => {
+    console.log(item);
     if (projects)
       return (
         <div
-          className="card bg-base-100 w-full sm:max-w-96 shadow-sm my-3 flex shrink mx-auto"
+          className="card bg-base-100 w-full h-full sm:max-w-96 shadow-sm my-3 flex shrink mx-auto"
           key={index}
         >
-          <figure className="flex">
-            <img src={item?.imageurl} alt={item?.title} className="flex" />
-          </figure>
+          <Link
+            className="flex"
+            href={`${process.env.BASE_URL}/projects/${item?.slug}`}
+          >
+            <img
+              src={item?.imageurl}
+              alt={item?.title}
+              className="w-full h-full"
+            />
+          </Link>
           <div className="card-body">
-            <h2 className="card-title">
+            <Link
+              className="card-title"
+              href={`${process.env.BASE_URL}/projects/${item?.slug}`}
+            >
               {item?.title}
               {index === 0 ? (
                 <div className="badge badge-secondary">NEW</div>
               ) : (
                 ""
               )}
-            </h2>
+            </Link>
             <p>I built a Todo-List from scratch...</p>
             <div className="card-actions justify-end">
               {item?.technologies.map((tech, index) => {
@@ -63,7 +74,10 @@ async function Projects() {
                 );
               })}
             </div>
-            <Link className="btn btn-primary" href={"/"}>
+            <Link
+              className="btn btn-primary"
+              href={`${process.env.BASE_URL}/projects/${item?.slug}`}
+            >
               Check it out
             </Link>
           </div>
@@ -131,7 +145,9 @@ async function Projects() {
           </Link>
         </div>
       </section>
-      <section className="flex flex-wrap gap-2">{project}</section>
+      <section className="grid grid-cols-4 space-y-3 gap-3 mb-5">
+        {project}
+      </section>
     </>
   );
 }
