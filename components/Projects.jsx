@@ -131,10 +131,10 @@ async function Projects() {
   });
   return (
     <>
-      <section>
+      <section className="">
         <div className="flex w-full px-3 items-center space-x-3">
           <h3
-            className="sm:text-3xl text-xl font-bold text-center"
+            className="sm:text-3xl text-xl font-bold text-center scroll-auto scroll-p-9"
             id="projects"
           >
             Projects
@@ -145,7 +145,7 @@ async function Projects() {
           </Link>
         </div>
       </section>
-      <section className="grid grid-cols-4 space-y-3 gap-3 mb-5">
+      <section className="grid sm:grid-cols-4 space-y-3 gap-3 mb-5">
         {project}
       </section>
     </>

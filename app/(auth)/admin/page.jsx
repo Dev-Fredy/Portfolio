@@ -10,7 +10,7 @@ async function Admin() {
 
   let totalProjects = projects.projects.length;
 
-  console.log(totalProjects);
+  let totalTechs = techs.tech.length;
 
   return (
     <>
@@ -22,9 +22,12 @@ async function Admin() {
           <div className="">{totalProjects}</div>
         </div>
         <hr />
-        <Link href={"/admin/technologies"} className="font-semibold">
-          Technologies
-        </Link>
+        <div className="flex justify-between">
+          <Link href={"/admin/technologies"} className="font-semibold">
+            Technologies
+          </Link>
+          <div className="">{totalTechs}</div>
+        </div>
         <hr />
         <Link href={"/admin/socials"} className="font-semibold">
           Socials
